@@ -1,6 +1,7 @@
 # 🌐 Zona Wordle
 
 Este repositorio es un clon del popular juego **Wordle** que puedes jugar directamente en tu navegador. A continuación, te explico cómo está estructurado y cómo funciona el proyecto.
+- Para poder jugar dirígete a la [web](https://zona05.github.io/My-own-basic-Wordle/) desde el navegador.
 
 ## 📄 Archivos en el Repositorio
 
