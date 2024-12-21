@@ -11,6 +11,8 @@ Contiene todos los estilos del juego, incluyendo los colores de las celdas y el 
 ## 3. `script.js` 🧠
 Este archivo maneja la lógica del juego. A través de eventos de teclado y clics en las teclas en pantalla, los jugadores pueden ingresar sus palabras, y el juego las valida, comparando con la palabra objetivo.
 
+## 💻 Preview del juego
+![Captura del juego](https://i.imgur.com/P2DM5LB.png)
 ## ⚙️ Funcionalidad
 - Reglas del Juego: Tienes 6 intentos para adivinar la palabra de 5 letras.
 - Colores: Las celdas de las palabras ingresadas cambiarán de color:
@@ -24,10 +26,6 @@ Este archivo maneja la lógica del juego. A través de eventos de teclado y clic
 3. Si adivinas la palabra correctamente, ¡felicitaciones! 🎉
 4. Si no adivinas en los 6 intentos, perderás y se mostrará la palabra correcta 😔.
 ## 🔧 Instalación y Ejecución
-1. Clona este repositorio: ```git clone https://github.com/usuario/zona-wordle.git```
-2. Abre `index.html` en tu navegador.
-
-## 📝 Notas
-El juego está completamente funcional, pero puedes personalizarlo y agregar nuevas características.
-Si encuentras algún error o deseas mejorar la experiencia, no dudes en contribuir 👐.
-¡Diviértete jugando! 🎮
+1. Clona este repositorio: ```git clone https://github.com/zona05/My-own-basic-Wordle.git```
+2. Asegúrate de tener un servidor local creado con Python o con la extensión `Live Server` de VSCode.
+3. Abre `index.html` en tu navegador.
