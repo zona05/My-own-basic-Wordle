@@ -1,0 +1,281 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos básicos del cuerpo */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0a0a0f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor del juego y reglas */
+.game-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: flex-start; 
+  padding-left: 50px;
+}
+
+/* Panel de Reglas */
+.rules-panel {
+  width: 30%;
+  height: 30%;
+  padding: 20px;
+  background-color: #1d1b33;
+  border: 1px solid #312f55;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  margin-right: 0; 
+  margin-left: -500px;
+}
+
+.rules-panel h2 {
+  margin-top: 0px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.rules-panel p, .rules-panel ul {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.rules-panel ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.rules-panel ul li {
+  margin-bottom: 10px;
+}
+
+/* Colores de las celdas para las reglas */
+.color-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.correct {
+  background-color: #6aaa64;
+}
+
+.present {
+  background-color: #c9b458;
+}
+
+.absent {
+  background-color: #555a8b;
+}
+
+/* Estilos para el tablero y teclado */
+.game-board {
+  width: 70%;
+  text-align: center;
+  margin-left: 350px;
+}
+
+/* Tabla de juego */
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  width: 400px; 
+  margin: 0 auto;
+}
+
+/* Celdas de la tabla */
+.cell {
+  width: 70px; 
+  height: 70px;
+  border: 3px solid #28283a; 
+  text-align: center;
+  line-height: 70px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #0b0b11;
+  color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cell.correct {
+  background-color: var(--correct);
+}
+
+.cell.present {
+  background-color: var(--present);
+}
+
+.cell.absent {
+  background-color: var(--absent);
+}
+
+/* Teclado */
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); 
+  gap: 10px; 
+  margin-top: 30px; 
+  width: 400px; 
+  justify-items: center;
+  margin-left: center;
+  margin-right: auto;
+}
+
+/* Teclas estándar */
+.key {
+  padding: 15px; 
+  border: 2px solid #2b2b3d; 
+  background-color: #5a7583;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem; 
+  cursor: pointer;
+  border-radius: 4px;
+  width: 60px; 
+  height: 60px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease; 
+}
+
+/* Teclas con iconos */
+.key.enter, .key.backspace {
+  width: 70px; 
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key.enter:before {
+  content: ''; 
+  font-size: 1.5rem;
+}
+
+.key.backspace:before {
+  content: ''; 
+  font-size: 1.5rem;
+}
+
+/* Tecla hover para todas las teclas */
+.keyboard .key:hover {
+  background-color: #3a4958 !important;
+}
+
+/* Variables para los colores */
+:root {
+  --background-dark: #1c1d3b;
+  --background-light: #6f71ad;
+  --text-dark: #bcd2ff;
+  --text-light: #1c1544;
+  --cell-dark: #555a8b;
+  --cell-light: #8bacd4;
+  --correct-light: #6aaa64;
+  --present-light: #c9b458;
+  --absent-light: #8bacd4;
+  --correct-dark: #6aaa64;
+  --present-dark: #c9b458;
+  --absent-dark: #555a8b;
+}
+
+/* Estilos para el modo oscuro */
+body.dark {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+body.dark .cell {
+  background-color: var(--cell-dark);
+}
+
+body.dark .key {
+  background-color: #554b81;
+}
+
+body.dark .rules-panel {
+  background-color: #1d1b33;
+}
+
+body.dark .absent{
+  background-color: #555a8b;
+}
+
+body.dark .cell.correct {
+  background-color: var(--correct-dark);
+}
+
+body.dark .cell.present {
+  background-color: var(--present-dark);
+}
+
+body.dark .cell.absent {
+  background-color: var(--absent-dark);
+}
+
+/* Estilos para el modo claro */
+body.light .absent{
+  background-color: #8bacd4;
+}
+
+body.light {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+body.light .cell {
+  background-color: var(--cell-light);
+}
+
+body.light .key {
+  background-color: #a78bd4;
+}
+
+body.light .rules-panel {
+  background-color: #645eaa;
+}
+
+body.light .cell.correct {
+  background-color: var(--correct-light);
+}
+
+body.light .cell.present {
+  background-color: var(--present-light);
+}
+
+body.light .cell.absent {
+  background-color: var(--absent-light);
+}
+
+/* Estilos para el botón de cambio de tema */
+#theme-toggle {
+  padding: 15px;
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Cambiar la opacidad al pasar el ratón */
+#theme-toggle:hover {
+  opacity: 1;
+}

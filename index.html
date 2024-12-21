@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona Wordle</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark">
+  <main>
+    <div class="game-container">
+      <div class="rules-panel">
+        <h2>Reglas del Juego</h2>
+        <p><strong>Objetivo:</strong> Adivina la palabra de 5 letras en 6 intentos.</p>
+        <p><strong>Colores en las celdas:</strong></p>
+        <ul>
+          <li><span class="color-box correct"></span> <strong>Verde</strong>: La letra es correcta y está en la posición correcta.</li>
+          <li><span class="color-box present"></span> <strong>Amarillo</strong>: La letra está en la palabra, pero en una posición diferente.</li>
+          <li><span class="color-box absent"></span> <strong>Gris</strong>: La letra no está en la palabra.</li>
+        </ul>
+        <p><strong>Cómo jugar:</strong> Escribe una palabra y dale al enter.</p>
+        <p><strong>Cambie de modo al:</strong></p>
+        <button id="theme-toggle">Modo Oscuro</button></p>
+      </div>
+      <div class="game-board">
+        <h1>Wordle</h1>
+        <div id="Has ganado!"></div>
+        <div class="board"></div>
+        <div class="keyboard"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
